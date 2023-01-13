@@ -1,0 +1,58 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BaseButton from "../components/BaseButton.astro";
+import TechnologyDiv from "../components/TechnologyDiv.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Web Minimalism</h1>
+			<p>
+				Welcome to my personal website. My name is Przemyslaw
+				Niewolinski. I am a junior web developer. I like programming in
+				general, but I am most interested in the anything related to web
+				technologies - websites, web applications & cloud. There is
+				something inherently fascinating about code being live,
+				available on the internet and potentially used by millions at
+				the same time. I like simplicity and when it comes to code, I
+				consider myself a minimalist - ship as little code as possible
+				with clean and readable solutions in mind.
+			</p>
+		</main>
+		<nav>
+			<BaseButton>GitHub</BaseButton>
+			<BaseButton>CodeWars</BaseButton>
+			<BaseButton>LinkedIn</BaseButton>
+		</nav>
+		<div>
+			<h2>Technologies</h2>
+			<div class="gallery">
+				<TechnologyDiv />
+				<TechnologyDiv />
+			</div>
+		</div>
+		<div>
+			<h2>Projects</h2>
+		</div>
+
+		<blockquote>
+			“Perfection is Achieved Not When There Is Nothing More to Add, But
+			When There Is Nothing Left to Take Away” - Antoine de Saint-Exupery.
+		</blockquote>
+		<Footer />
+		<style>
+			.gallery {
+				display: flex;
+			}
+		</style>
+	</body>
+</html>
