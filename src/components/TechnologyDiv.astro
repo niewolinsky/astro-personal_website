@@ -1,12 +1,19 @@
+---
+// Usage: <GreetingHeadline greeting="Howdy" name="Partner" />
+const { title, stack, description } = Astro.props;
+---
+
 <div>
-    <h3>Front-End Frameworks</h3>
-    <h4>Vue, Svelte</h4>
-    <p>I have knowledge of these front-end frameworks.</p>
+    <h3>{title}</h3>
+    <h4>{stack}</h4>
+    <p>{description}</p>
 </div>
 <style>
     div {
-        min-height: 300px;
-        border: black 1px solid;
+        min-height: 180px;
+        border: var(--text-color) 1px solid;
         border-radius: 4px;
+        padding: 10px 20px;
+        flex: 1 1 28%;
     }
 </style>

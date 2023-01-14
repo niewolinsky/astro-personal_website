@@ -4,7 +4,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BaseButton from "../components/BaseButton.astro";
 import TechnologyDiv from "../components/TechnologyDiv.astro";
+import ProjectDiv from "../components/ProjectDiv.astro";
+import globe from "../images/binary-globe.svg";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const { title, stack, description, url } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -15,44 +19,171 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>Web Minimalism</h1>
-			<p>
-				Welcome to my personal website. My name is Przemyslaw
-				Niewolinski. I am a junior web developer. I like programming in
-				general, but I am most interested in the anything related to web
-				technologies - websites, web applications & cloud. There is
-				something inherently fascinating about code being live,
-				available on the internet and potentially used by millions at
-				the same time. I like simplicity and when it comes to code, I
-				consider myself a minimalist - ship as little code as possible
-				with clean and readable solutions in mind.
-			</p>
+			<div>
+				<h1>Web Minimalism</h1>
+				<p>
+					Welcome to my personal website. My name is Przemyslaw
+					Niewolinski. I am a junior web developer. I like programming
+					in general, but I am most interested in the anything related
+					to web technologies - websites, web applications & cloud.
+					There is something inherently fascinating about code being
+					live, available on the internet and potentially used by
+					millions at the same time. I like simplicity and when it
+					comes to code, I consider myself a minimalist - ship as
+					little code as possible with clean and readable solutions in
+					mind.
+				</p>
+				<nav>
+					<BaseButton>GitHub</BaseButton>
+					<BaseButton>CodeWars</BaseButton>
+					<BaseButton>LinkedIn</BaseButton>
+				</nav>
+			</div>
+			<img
+				src={globe}
+				width="400px"
+				alt="Globe In Binary Format"
+				class="filter"
+			/>
 		</main>
-		<nav>
-			<BaseButton>GitHub</BaseButton>
-			<BaseButton>CodeWars</BaseButton>
-			<BaseButton>LinkedIn</BaseButton>
-		</nav>
 		<div>
 			<h2>Technologies</h2>
 			<div class="gallery">
-				<TechnologyDiv />
-				<TechnologyDiv />
+				<TechnologyDiv
+					title="Programming Languages"
+					stack="Go, Typescript, Python"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Frontend Frameworks"
+					stack="Vue, Astro"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Backend Runtimes"
+					stack="Node, Deno"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Databases"
+					stack="Postgres, MongoDB, Redis"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Tooling"
+					stack="Docker, Task, Caddy"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Cloud Providers"
+					stack="AWS, DigitalOcean"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Operating Systems"
+					stack="Ubuntu Server, Arch Linux"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="SEM & SEO"
+					stack="Google Ads, Analytics, Search Console"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
+				<TechnologyDiv
+					title="Other"
+					stack="Wordpress, Shopify"
+					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+				/>
 			</div>
 		</div>
+		<hr />
 		<div>
 			<h2>Projects</h2>
+			<div class="gallery">
+				<ProjectDiv
+					title="Iemscrapper"
+					url="https://github.com/niewolinsky/go-iemscrapper"
+					stack="Go (gocron, colly), MongoDB, Redis"
+					description="Unix daemon perodically scrapping a earphone store, archiving the data and serving it via http."
+				/>
+				<ProjectDiv
+					title="Spotify Enhanced"
+					url="https://github.com/niewolinsky/vue-spotify_enhanced"
+					stack="Vue (vuex, vue router), Spotify REST API"
+					description="Single page application making use of Spotify data to present user's listening habits and statistics (similar Spotify Wrapped event) in a appealing and readable manner."
+				/>
+				<ProjectDiv
+					title="Snake Photo Editor"
+					url="https://github.com/niewolinsky/python-snake_photo_editor"
+					stack="Python (OpenCV, cvui, Pillow)"
+					description="Fun project trying to recreate some of the popular photo editing software with minimal effort using Python. Created as a part of uni project."
+				/>
+				<ProjectDiv
+					title="Movie Database"
+					url="https://github.com/niewolinsky/go-moviedb"
+					stack="Go (httprouter), PostgreSQL, Migrate, Task"
+					description="Framework-less REST API, allowing you to store and retrieve simple movie data in JSON format. Follows standard good practices regarding UX and HTTP."
+				/>
+			</div>
 		</div>
-
-		<blockquote>
+		<hr />
+		<p class="squeeze">
 			“Perfection is Achieved Not When There Is Nothing More to Add, But
 			When There Is Nothing Left to Take Away” - Antoine de Saint-Exupery.
-		</blockquote>
+		</p>
 		<Footer />
 		<style>
 			.gallery {
 				display: flex;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+			main {
+				display: flex;
+				justify-content: center;
+				justify-items: center;
+				align-items: center;
+				align-content: center;
+				flex-direction: row;
+				text-align: justify;
+			}
+			img {
+				margin-left: 80px;
+			}
+			hr {
+				margin: 10px;
+				border: 0;
+				height: 1px;
+				background-image: linear-gradient(
+					to right,
+					rgba(0, 0, 0, 0),
+					rgba(0, 0, 0, 0.75),
+					rgba(0, 0, 0, 0)
+				);
+			}
+			.squeeze {
+				margin: 0 auto;
+				max-width: 360px;
+				text-align: center;
+			}
+			.filter {
+				filter: invert(var(--inversion-power));
+			}
+			@media (max-width: 640px) {
+				main {
+					flex-direction: column;
+				}
+				img {
+					order: -1;
+					margin-left: 0px;
+				}
+				.gallery {
+					flex-direction: column;
+				}
 			}
 		</style>
+		<script>
+			import "../scripts/script.js";
+		</script>
 	</body>
 </html>

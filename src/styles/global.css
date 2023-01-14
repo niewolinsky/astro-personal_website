@@ -1,19 +1,28 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+:root {
+	--text-color: #000000;
+	--background-color: #FFFFFF;
+	--accent-color: #FFFF00;
+	--inversion-power: 0%;
+}
+
+[data-theme="dark"] {
+	--text-color: #FFFFFF;
+	--background-color: #000000;
+	--accent-color: #FFFF00;
+	--inversion-power: 100%;
+}
+
 body {
 	font-family: "Fira Code", monospace;
 	margin: auto;
 	padding: 20px;
 	max-width: 120ch;
 	text-align: left;
-	background-color: #fff;
+	background-color: var(--background-color);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: var(--text-color);
 }
 
 h1,
@@ -24,15 +33,16 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
-}
-
-a {
-	color: #3273dc;
+	color: var(--text-color);
+	margin: 0px;
 }
 
 nav a {
 	margin-right: 10px;
+}
+
+a {
+	color: var(--text-color);
 }
 
 textarea {
@@ -76,4 +86,8 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+
+svg {
+	color: red;
 }
