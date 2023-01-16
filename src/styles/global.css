@@ -1,13 +1,17 @@
 :root {
 	--text-color: #000000;
 	--background-color: #FFFFFF;
-	--accent-color: #FFFF00;
+	--text-color-subtle: rgba(0, 0, 0, 0.75);
+	--background-color-subtle: rgba(255, 255, 255, 0.75);
+	--accent-color: #0000FF;
 	--inversion-power: 0%;
 }
 
 [data-theme="dark"] {
 	--text-color: #FFFFFF;
 	--background-color: #000000;
+	--text-color-subtle: rgba(255, 255, 255, 0.75);
+	--background-color-subtle: rgba(0, 0, 0, 0.75);
 	--accent-color: #FFFF00;
 	--inversion-power: 100%;
 }
@@ -17,11 +21,8 @@ body {
 	margin: auto;
 	padding: 20px;
 	max-width: 120ch;
-	text-align: left;
 	background-color: var(--background-color);
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
+	line-height: 1.4;
 	color: var(--text-color);
 }
 
@@ -30,64 +31,20 @@ h2,
 h3,
 h4,
 h5,
-h6,
-strong,
-b {
-	color: var(--text-color);
+h6 {
 	margin: 0px;
-}
-
-nav a {
-	margin-right: 10px;
 }
 
 a {
 	color: var(--text-color);
+	text-decoration: none;
 }
 
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-
-input {
-	font-size: 16px;
-}
-
-content {
-	line-height: 1.6;
-}
-
-table {
-	width: 100%;
+a:hover {
+	color: var(--accent-color);
 }
 
 img {
 	max-width: 100%;
 	height: auto;
-}
-
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-
-pre {
-	padding: 1rem;
-}
-
-pre>code {
-	all: unset;
-}
-
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
-}
-
-svg {
-	color: red;
 }

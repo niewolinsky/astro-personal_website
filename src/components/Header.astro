@@ -5,32 +5,76 @@ import { SITE_TITLE } from "../config";
 
 <header>
 	<h2>
-		{SITE_TITLE}
+		<a href="/">{SITE_TITLE}</a>
 	</h2>
 	<nav>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/contact">Contact</HeaderLink>
 	</nav>
-	<div id="switchContainer" class="switch">
-		<input type="checkbox" id="darkMode" />
-		<label for="darkMode">-------------</label>
-	</div>
+	<input type="checkbox" class="toggle" />
 </header>
 <style>
+	h2 {
+		font-size: 20px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
 	header {
 		display: flex;
 		flex-direction: row;
 		justify-items: flex-start;
-		align-items: baseline;
+		align-items: center;
 	}
-	h2 {
-		font-size: 20px;
-	}
+
 	nav {
-		width: 100%;
+		flex: 1;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		gap: 16px;
+	}
+
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		-webkit-tap-highlight-color: transparent;
+		cursor: pointer;
+	}
+	input[type="checkbox"]:focus {
+		outline: 0;
+	}
+	.toggle {
+		height: 20px;
+		width: 40px;
+		border-radius: 16px;
+		display: block;
+		position: relative;
+		margin: 0;
+		border: 2px solid var(--background-color);
+		background: var(--text-color);
+		transition: all 0.2s ease;
+	}
+	.toggle:after {
+		content: "";
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--background-color);
+		transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+	}
+	.toggle:checked:after {
+		transform: translatex(20px);
+	}
+	@media (max-width: 640px) {
+		h2 {
+			font-size: 14px;
+		}
 	}
 </style>

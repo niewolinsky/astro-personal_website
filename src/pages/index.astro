@@ -20,18 +20,17 @@ const { title, stack, description, url } = Astro.props;
 		<Header title={SITE_TITLE} />
 		<main>
 			<div>
-				<h1>Web Minimalism</h1>
+				<h1>Web Developer</h1>
 				<p>
-					Welcome to my personal website. My name is Przemyslaw
-					Niewolinski. I am a junior web developer. I like programming
+					Welcome to my personal website. My name is Przemysław
+					Niewoliński. I am a junior web developer. I like programming
 					in general, but I am most interested in the anything related
 					to web technologies - websites, web applications & cloud.
 					There is something inherently fascinating about code being
 					live, available on the internet and potentially used by
 					millions at the same time. I like simplicity and when it
 					comes to code, I consider myself a minimalist - ship as
-					little code as possible with clean and readable solutions in
-					mind.
+					little code as possible with clean architecture in mind.
 				</p>
 				<nav>
 					<BaseButton>GitHub</BaseButton>
@@ -41,7 +40,7 @@ const { title, stack, description, url } = Astro.props;
 			</div>
 			<img
 				src={globe}
-				width="400px"
+				width="360px"
 				alt="Globe In Binary Format"
 				class="filter"
 			/>
@@ -52,47 +51,47 @@ const { title, stack, description, url } = Astro.props;
 				<TechnologyDiv
 					title="Programming Languages"
 					stack="Go, Typescript, Python"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I use Go for CLI apps, standalone backends and cloud microservices. I like Typescript for fullstack and frontend development. I sometimes use Python as a scripting language and for data science."
 				/>
 				<TechnologyDiv
 					title="Frontend Frameworks"
 					stack="Vue, Astro"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I use Vue for single-page applications and general frontends. I am familar with Nuxt for writing fullstack SSR/MPA applications. I use Astro for static or content-driven websites. I can also build websites without a framework."
 				/>
 				<TechnologyDiv
 					title="Backend Runtimes"
 					stack="Node, Deno"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I use Node for simple REST APIs, or as a middleware to other apps. At the moment, I prefer Deno over Node simply beacuse of the built-in tooling. I plan on learning Fastify and/or Fresh for their respective runtimes."
 				/>
 				<TechnologyDiv
 					title="Databases"
 					stack="Postgres, MongoDB, Redis"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="Postgres is the main database that I use in most of my projects. I also have some experience with Oracle and Microsoft SQL flavours. Where relations does not make much sense I use MongoDB. Redis is my go-to caching solution."
 				/>
 				<TechnologyDiv
 					title="Tooling"
 					stack="Docker, Task, Caddy"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I have basic knowledge regarding contenerization and Docker. I use Task as my main task runner/build tool. My server of choice is Caddy."
 				/>
 				<TechnologyDiv
 					title="Cloud Providers"
 					stack="AWS, DigitalOcean"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I use DigitalOcean with my own apps. When app architecture requires more advanced and custom solutions I switch to Amazon AWS. I want to gain a greater knowledge in utilizing AWS, at the moment I'm familar with basic administrative tasks and main services: S3, EC2, RDB."
 				/>
 				<TechnologyDiv
 					title="Operating Systems"
 					stack="Ubuntu Server, Arch Linux"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="Currently I'm developing all my applications on custom-built Arch Linux. I like the ability to customize every single piece of my operating system. Ubuntu Server is my choice for stable and mature environment for all other tasks, besides personal use."
 				/>
 				<TechnologyDiv
 					title="SEM & SEO"
 					stack="Google Ads, Analytics, Search Console"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I used Google online marketing services for advertising, analysis and optimizing websites. I also have some basic skills for content creation. My software of choice is Affinity suite and Figma for any creative work."
 				/>
 				<TechnologyDiv
 					title="Other"
 					stack="Wordpress, Shopify"
-					description="I am familar with Vue for single-page applications or server-side rendered apps and Astro for static websites and light bundled apps."
+					description="I have built few static websites using Wordpress with Gutenberg-based themes like Kadence & Getwid Blocks. I plan on learning Shopify in the future."
 				/>
 			</div>
 		</div>
@@ -104,32 +103,41 @@ const { title, stack, description, url } = Astro.props;
 					title="Iemscrapper"
 					url="https://github.com/niewolinsky/go-iemscrapper"
 					stack="Go (gocron, colly), MongoDB, Redis"
-					description="Unix daemon perodically scrapping a earphone store, archiving the data and serving it via http."
+					description="Daemon app that perodically scraps data from popular earphone stores and ranking websites, archiving it and serving the data along some interesting statistics, that might help potential buyer. The information is then served independently via http."
 				/>
 				<ProjectDiv
 					title="Spotify Enhanced"
 					url="https://github.com/niewolinsky/vue-spotify_enhanced"
 					stack="Vue (vuex, vue router), Spotify REST API"
-					description="Single page application making use of Spotify data to present user's listening habits and statistics (similar Spotify Wrapped event) in a appealing and readable manner."
+					description="Single-page application making use of Spotify's REST API to present user listening habits and statistics (similar to Spotify Wrapped event) in a appealing and readable manner. I wrote my own mini css framework mimicking the glassmorphism style."
 				/>
 				<ProjectDiv
 					title="Snake Photo Editor"
 					url="https://github.com/niewolinsky/python-snake_photo_editor"
 					stack="Python (OpenCV, cvui, Pillow)"
-					description="Fun project trying to recreate some of the popular photo editing software with minimal effort using Python. Created as a part of uni project."
+					description="Fun project trying to recreate some of the popular photo editing software with minimal effort using Python. Created as a part of uni project. The app has many basic photo and image editing toolsa and utilities, but it is not meant to be used professionally."
 				/>
 				<ProjectDiv
 					title="Movie Database"
 					url="https://github.com/niewolinsky/go-moviedb"
 					stack="Go (httprouter), PostgreSQL, Migrate, Task"
-					description="Framework-less REST API, allowing you to store and retrieve simple movie data in JSON format. Follows standard good practices regarding UX and HTTP."
+					description="Framework-less REST API, allowing you to store and retrieve simple movie data in JSON format. Follows standard good practices regarding UX and HTTP. Written alongside reading a Alex Edward's 'Let's Go Further' book."
 				/>
 			</div>
+			<a
+				style="text-align: center; display: block; font-size: 20px; margin-top: 6px;"
+				href="https://github.com/niewolinsky"
+			>
+				{">"}more at github{"<"}
+			</a>
 		</div>
 		<hr />
 		<p class="squeeze">
-			“Perfection is Achieved Not When There Is Nothing More to Add, But
-			When There Is Nothing Left to Take Away” - Antoine de Saint-Exupery.
+			<i
+				>“Perfection is Achieved Not When There Is Nothing More to Add,
+				But When There Is Nothing Left to Take Away” - Antoine de
+				Saint-Exupery.</i
+			>
 		</p>
 		<Footer />
 		<style>
@@ -156,15 +164,16 @@ const { title, stack, description, url } = Astro.props;
 				height: 1px;
 				background-image: linear-gradient(
 					to right,
-					rgba(0, 0, 0, 0),
-					rgba(0, 0, 0, 0.75),
-					rgba(0, 0, 0, 0)
+					var(--background-color-subtle),
+					var(--text-color-subtle),
+					var(--background-color-subtle)
 				);
 			}
 			.squeeze {
 				margin: 0 auto;
 				max-width: 360px;
 				text-align: center;
+				text-decoration: ;
 			}
 			.filter {
 				filter: invert(var(--inversion-power));
