@@ -1,0 +1,30 @@
+---
+import ContactDetails from "./ContactDetails.astro";
+import ContactForm from "./ContactForm.astro";
+---
+
+<main>
+    <h1>Contact</h1>
+    <div class="flex">
+        <ContactDetails />
+        <ContactForm />
+    </div>
+</main>
+<style>
+    main {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    p {
+        margin: 0;
+    }
+
+    div.flex {
+        display: flex;
+    }
+</style>

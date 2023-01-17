@@ -1,0 +1,89 @@
+---
+import globe from "../images/binary-globe.svg";
+import BaseButton from "../components/BaseButton.astro";
+---
+
+<main>
+    <div>
+        <h1>Web Developer</h1>
+        <img
+            src={globe}
+            width="260px"
+            alt="Globe Image In Binary Format"
+            class="filter mobile"
+        />
+        <p>
+            Welcome to my website. My name is Przemysław Niewoliński. I am a
+            junior web developer. I like programming in general, but I am most
+            interested in the anything related to web technologies - websites,
+            web applications & cloud. There is something inherently fascinating
+            about code being live, available on the internet and potentially
+            used by millions at the same time. I like simplicity and when it
+            comes to code, I consider myself a minimalist - ship as little code
+            as possible with clean architecture in mind. Check out my <a
+                href="#projects">projects</a
+            > or <a href="#technologies">technologies</a> that i use.
+        </p>
+        <nav>
+            <BaseButton>GitHub</BaseButton>
+            <BaseButton>CodeWars</BaseButton>
+            <BaseButton>LinkedIn</BaseButton>
+        </nav>
+    </div>
+    <img
+        src={globe}
+        width="340px"
+        alt="Globe Image In Binary Format"
+        class="filter desktop"
+    />
+</main>
+<style>
+    img.desktop {
+        margin-left: 80px;
+    }
+    img.mobile {
+        display: none;
+        margin: 0 auto;
+    }
+    img.filter {
+        filter: invert(var(--inversion-power));
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 12px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var(--accent-color);
+    }
+
+    @media (max-width: 640px) {
+        main {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            justify-content: space-evenly;
+            margin-bottom: 12px;
+        }
+
+        img.mobile {
+            display: block;
+        }
+
+        img.desktop {
+            display: none;
+        }
+    }
+</style>

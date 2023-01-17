@@ -2,10 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import BaseButton from "../components/BaseButton.astro";
 import TechnologyDiv from "../components/TechnologyDiv.astro";
 import ProjectDiv from "../components/ProjectDiv.astro";
-import globe from "../images/binary-globe.svg";
+import IndexMain from "../components/IndexMain.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const { title, stack, description, url } = Astro.props;
@@ -18,36 +17,10 @@ const { title, stack, description, url } = Astro.props;
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
-		<main>
-			<div>
-				<h1>Web Developer</h1>
-				<p>
-					Welcome to my personal website. My name is Przemysław
-					Niewoliński. I am a junior web developer. I like programming
-					in general, but I am most interested in the anything related
-					to web technologies - websites, web applications & cloud.
-					There is something inherently fascinating about code being
-					live, available on the internet and potentially used by
-					millions at the same time. I like simplicity and when it
-					comes to code, I consider myself a minimalist - ship as
-					little code as possible with clean architecture in mind.
-				</p>
-				<nav>
-					<BaseButton>GitHub</BaseButton>
-					<BaseButton>CodeWars</BaseButton>
-					<BaseButton>LinkedIn</BaseButton>
-				</nav>
-			</div>
-			<img
-				src={globe}
-				width="360px"
-				alt="Globe In Binary Format"
-				class="filter"
-			/>
-		</main>
+		<IndexMain />
 		<div>
-			<h2>Technologies</h2>
-			<div class="gallery">
+			<h2 id="technologies">My Technology Stack</h2>
+			<div class="grid">
 				<TechnologyDiv
 					title="Programming Languages"
 					stack="Go, Typescript, Python"
@@ -97,8 +70,8 @@ const { title, stack, description, url } = Astro.props;
 		</div>
 		<hr />
 		<div>
-			<h2>Projects</h2>
-			<div class="gallery">
+			<h2 id="projects">My Projects</h2>
+			<div class="grid">
 				<ProjectDiv
 					title="Iemscrapper"
 					url="https://github.com/niewolinsky/go-iemscrapper"
@@ -132,32 +105,21 @@ const { title, stack, description, url } = Astro.props;
 			</a>
 		</div>
 		<hr />
-		<p class="squeeze">
+		<blockquote>
 			<i
 				>“Perfection is Achieved Not When There Is Nothing More to Add,
 				But When There Is Nothing Left to Take Away” - Antoine de
-				Saint-Exupery.</i
-			>
-		</p>
+				Saint-Exupery.
+			</i>
+		</blockquote>
 		<Footer />
 		<style>
-			.gallery {
+			.grid {
 				display: flex;
 				gap: 20px;
 				flex-wrap: wrap;
 			}
-			main {
-				display: flex;
-				justify-content: center;
-				justify-items: center;
-				align-items: center;
-				align-content: center;
-				flex-direction: row;
-				text-align: justify;
-			}
-			img {
-				margin-left: 80px;
-			}
+
 			hr {
 				margin: 10px;
 				border: 0;
@@ -169,25 +131,21 @@ const { title, stack, description, url } = Astro.props;
 					var(--background-color-subtle)
 				);
 			}
-			.squeeze {
-				margin: 0 auto;
+
+			blockquote {
+				margin: 40px auto 20px auto;
 				max-width: 360px;
 				text-align: center;
 				text-decoration: ;
 			}
-			.filter {
-				filter: invert(var(--inversion-power));
-			}
+
 			@media (max-width: 640px) {
-				main {
+				.grid {
 					flex-direction: column;
 				}
-				img {
-					order: -1;
-					margin-left: 0px;
-				}
-				.gallery {
-					flex-direction: column;
+
+				h2 {
+					text-align: center;
 				}
 			}
 		</style>

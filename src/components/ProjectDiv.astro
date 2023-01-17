@@ -10,10 +10,14 @@ const { title, stack, description, url } = Astro.props;
 </div>
 <style>
     div {
-        min-height: 180px;
         border: var(--text-color) 1px solid;
         border-radius: 4px;
         padding: 10px 20px;
         flex: 1 1 40%;
+        color: var(--accent);
+    }
+
+    a {
+        text-decoration: underline;
     }
 </style>

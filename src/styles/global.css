@@ -12,7 +12,7 @@
 	--background-color: #000000;
 	--text-color-subtle: rgba(255, 255, 255, 0.75);
 	--background-color-subtle: rgba(0, 0, 0, 0.75);
-	--accent-color: #FFFF00;
+	--accent-color: #ffff00;
 	--inversion-power: 100%;
 }
 
@@ -24,6 +24,10 @@ body {
 	background-color: var(--background-color);
 	line-height: 1.4;
 	color: var(--text-color);
+}
+
+* {
+	box-sizing: border-box;
 }
 
 h1,
