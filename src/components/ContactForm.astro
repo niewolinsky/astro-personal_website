@@ -1,19 +1,15 @@
 <div>
-    <form
-        action="mailto:niewolinski@protonmail.com"
-        method="post"
-        enctype="text/plain"
-    >
-        <input type="text" placeholder="Name" required="" name="name" />
-        <input
-            id="email_address"
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            required=""
-        />
-        <textarea name="message" required="" placeholder="Your Message"
-        ></textarea>
-        <button type="submit">Send Message</button>
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input name="name" type="text" /><br /><br />
+        <label for="email">Email:</label>
+        <input name="email" type="email" /><br /><br />
+        <label for="name">Message:</label>
+        <textarea name="message"></textarea><br /><br />
+        <input type="submit" />
+        <div>
+            <p id="result-text"></p>
+        </div>
     </form>
 </div>
