@@ -1,15 +1,40 @@
 <div>
-    <h2>Contact Us</h2>
+    <h2>Leave Message</h2>
     <form>
         <label for="name">Name:</label>
-        <input name="name" type="text" /><br /><br />
+        <input name="name" type="text" />
         <label for="email">Email:</label>
-        <input name="email" type="email" /><br /><br />
+        <input name="email" type="email" />
         <label for="name">Message:</label>
-        <textarea name="message"></textarea><br /><br />
+        <textarea rows="4" name="message"></textarea>
         <input type="submit" />
         <div>
             <p id="result-text"></p>
         </div>
     </form>
 </div>
+
+<style>
+    div {
+        min-width: 300px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="submit"] {
+        margin-top: 20px;
+        border: 1px solid var(--text-color);
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        border-style: solid;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        color: var(--background-color);
+        border: 1px solid var(--text-color);
+        background-color: var(--accent-color);
+    }
+</style>

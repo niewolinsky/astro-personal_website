@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
 
     // Use your API endpoint URL you copied from the previous step
     const endpoint =
-        "<https://w3xi70pyx9.execute-api.eu-central-1.amazonaws.com/default/sendEmailNode>";
+        "https://w3xi70pyx9.execute-api.eu-central-1.amazonaws.com/default/sendEmailNode";
     // We use JSON.stringify here so the data can be sent as a string via HTTP
     const body = JSON.stringify({
         senderName: name.value,

@@ -5,7 +5,7 @@ import { SITE_TITLE } from "../config";
 
 <header>
 	<h2>
-		<a href="/astro-personal_website">{SITE_TITLE}</a>
+		<a href="/astro-personal_website/">{SITE_TITLE}</a>
 	</h2>
 	<nav>
 		<HeaderLink href="/astro-personal_website/blog">Blog</HeaderLink>
@@ -35,6 +35,7 @@ import { SITE_TITLE } from "../config";
 		flex-direction: row;
 		justify-content: center;
 		gap: 16px;
+		padding-right: 136px;
 	}
 
 	input[type="checkbox"] {
@@ -75,6 +76,9 @@ import { SITE_TITLE } from "../config";
 	@media (max-width: 640px) {
 		h2 {
 			font-size: 14px;
+		}
+		nav {
+			padding-right: 0px;
 		}
 	}
 </style>
