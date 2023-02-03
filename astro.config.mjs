@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://niewolinsky.github.io',
-	base: '/astro-personal_website',
+	site: 'https://niewolinsky.dev',
 	integrations: [mdx(), sitemap()],
 });
