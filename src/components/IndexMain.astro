@@ -1,6 +1,5 @@
 ---
 import globe from "../images/binary-globe.svg";
-import BaseButton from "../components/BaseButton.astro";
 ---
 
 <main>
@@ -25,9 +24,17 @@ import BaseButton from "../components/BaseButton.astro";
             > or <a href="#technologies">technologies</a> that i use.
         </p>
         <nav>
-            <BaseButton>GitHub</BaseButton>
-            <BaseButton>CodeWars</BaseButton>
-            <BaseButton>LinkedIn</BaseButton>
+            <a class="buttonLink" href="https://github.com/niewolinsky"
+                >GitHub</a
+            >
+            <a class="buttonLink" href="https://codewars.com/users/Niewolinsky"
+                >CodeWars</a
+            >
+            <a
+                class="buttonLink"
+                href="https://www.linkedin.com/in/przemys%C5%82aw-niewoli%C5%84ski-847521245/"
+                >LinkedIn</a
+            >
         </nav>
     </div>
     <img
@@ -64,6 +71,22 @@ import BaseButton from "../components/BaseButton.astro";
     a {
         text-decoration: underline;
         color: var(--accent-color);
+    }
+
+    .buttonLink {
+        border: 1px solid var(--text-color);
+        padding: 10px 20px;
+        border-radius: 4px;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        border-style: solid;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .buttonLink:hover {
+        color: var(--background-color);
+        border: 1px solid var(--text-color);
+        background-color: var(--accent-color);
     }
 
     @media (max-width: 640px) {
