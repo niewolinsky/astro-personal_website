@@ -5,13 +5,12 @@ form.addEventListener("submit", (event) => {
 
     const { name, email, message } = event.target;
 
-    const endpoint =
-        "https://w3xi70pyx9.execute-api.eu-central-1.amazonaws.com/default/sendEmailNode";
+    const endpoint = import.meta.env.PUBLIC_AWS_SES;
 
     const body = JSON.stringify({
-        senderName: name.value,
-        senderEmail: email.value,
-        message: message.value
+        toEmails: ["niewolinski@protonmail.com"],
+        subject: "Mail from niewolinsky.dev",
+        message: `Name: ${name.value}, Email: ${email.value}, Message: ${message.value}`
     });
     const requestOptions = {
         method: "POST",
@@ -21,14 +20,9 @@ form.addEventListener("submit", (event) => {
     fetch(endpoint, requestOptions)
         .then((response) => {
             if (!response.ok) throw new Error("Error in fetch");
-            return response.json();
-        })
-        .then((response) => {
-            document.getElementById("result-text").innerText =
-                "Email sent successfully!";
-        })
-        .catch((error) => {
-            document.getElementById("result-text").innerText =
-                error;
+            document.getElementById("result-text").innerText = "Email sent successfully!";
+            name.value = "";
+            email.value = "";
+            message.value = "";
         });
 });
