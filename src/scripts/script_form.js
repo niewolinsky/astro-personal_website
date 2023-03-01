@@ -5,7 +5,7 @@ form.addEventListener("submit", (event) => {
 
     const { name, email, message } = event.target;
 
-    const endpoint = import.meta.env.PUBLIC_AWS_SES;
+    const endpoint = "https://6nsdq0bs21.execute-api.eu-central-1.amazonaws.com/Prod/send";
 
     const body = JSON.stringify({
         toEmails: ["niewolinski@protonmail.com"],
