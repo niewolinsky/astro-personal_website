@@ -19,6 +19,42 @@ const { title, stack, description, url } = Astro.props;
 		<Header title={SITE_TITLE} />
 		<IndexMain />
 		<div>
+			<h2 id="projects">My Projects</h2>
+			<div class="grid">
+				<ProjectDiv
+					title="Iemscrapper"
+					url="https://github.com/niewolinsky/go-iemscrapper"
+					stack="Go (gocron, colly), MongoDB, Redis"
+					description="Daemon app that perodically scraps data from popular earphone stores and ranking websites, archiving it and serving the data along some interesting statistics, that might help potential buyer. The information is then served independently via http."
+				/>
+				<ProjectDiv
+					title="Spotify Enhanced"
+					url="https://github.com/niewolinsky/vue-spotify_enhanced"
+					stack="Vue (vuex, vue router), Spotify REST API"
+					description="Single-page application making use of Spotify's REST API to present user listening habits and statistics (similar to Spotify Wrapped event) in a appealing and readable manner. I wrote my own mini css framework mimicking the glassmorphism style."
+				/>
+				<ProjectDiv
+					title="Snake Photo Editor"
+					url="https://github.com/niewolinsky/python-snake_photo_editor"
+					stack="Python (OpenCV, cvui, Pillow)"
+					description="Fun project trying to recreate some of the popular photo editing software with minimal effort using Python. Created as a part of uni project. The app has many basic photo and image editing toolsa and utilities, but it is not meant to be used professionally."
+				/>
+				<ProjectDiv
+					title="Movie Database"
+					url="https://github.com/niewolinsky/go-moviedb"
+					stack="Go (httprouter), PostgreSQL, Migrate, Task"
+					description="Framework-less REST API, allowing you to store and retrieve simple movie data in JSON format. Follows standard good practices regarding UX and HTTP. Written alongside reading a Alex Edward's 'Let's Go Further' book."
+				/>
+			</div>
+			<a
+				style="text-align: center; display: block; font-size: 20px; margin-top: 6px;"
+				href="https://github.com/niewolinsky"
+			>
+				{">"}more at github{"<"}
+			</a>
+		</div>
+		<hr />
+		<div>
 			<h2 id="technologies">My Technology Stack</h2>
 			<div class="grid">
 				<TechnologyDiv
@@ -28,7 +64,7 @@ const { title, stack, description, url } = Astro.props;
 				/>
 				<TechnologyDiv
 					title="Frontend Frameworks"
-					stack="Vue, Astro"
+					stack="Vue (Nuxt), Astro"
 					description="I use Vue for single-page applications and general frontends. I am familar with Nuxt for writing fullstack SSR/MPA applications. I use Astro for static or content-driven websites. I can also build websites without a framework."
 				/>
 				<TechnologyDiv
@@ -67,42 +103,6 @@ const { title, stack, description, url } = Astro.props;
 					description="I have built few static websites using Wordpress with Gutenberg-based themes like Kadence & Getwid Blocks. I plan on learning Shopify in the future."
 				/>
 			</div>
-		</div>
-		<hr />
-		<div>
-			<h2 id="projects">My Projects</h2>
-			<div class="grid">
-				<ProjectDiv
-					title="Iemscrapper"
-					url="https://github.com/niewolinsky/go-iemscrapper"
-					stack="Go (gocron, colly), MongoDB, Redis"
-					description="Daemon app that perodically scraps data from popular earphone stores and ranking websites, archiving it and serving the data along some interesting statistics, that might help potential buyer. The information is then served independently via http."
-				/>
-				<ProjectDiv
-					title="Spotify Enhanced"
-					url="https://github.com/niewolinsky/vue-spotify_enhanced"
-					stack="Vue (vuex, vue router), Spotify REST API"
-					description="Single-page application making use of Spotify's REST API to present user listening habits and statistics (similar to Spotify Wrapped event) in a appealing and readable manner. I wrote my own mini css framework mimicking the glassmorphism style."
-				/>
-				<ProjectDiv
-					title="Snake Photo Editor"
-					url="https://github.com/niewolinsky/python-snake_photo_editor"
-					stack="Python (OpenCV, cvui, Pillow)"
-					description="Fun project trying to recreate some of the popular photo editing software with minimal effort using Python. Created as a part of uni project. The app has many basic photo and image editing toolsa and utilities, but it is not meant to be used professionally."
-				/>
-				<ProjectDiv
-					title="Movie Database"
-					url="https://github.com/niewolinsky/go-moviedb"
-					stack="Go (httprouter), PostgreSQL, Migrate, Task"
-					description="Framework-less REST API, allowing you to store and retrieve simple movie data in JSON format. Follows standard good practices regarding UX and HTTP. Written alongside reading a Alex Edward's 'Let's Go Further' book."
-				/>
-			</div>
-			<a
-				style="text-align: center; display: block; font-size: 20px; margin-top: 6px;"
-				href="https://github.com/niewolinsky"
-			>
-				{">"}more at github{"<"}
-			</a>
 		</div>
 		<hr />
 		<blockquote>
